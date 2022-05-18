@@ -70,7 +70,7 @@ Authorization: Key sdfsdlfkje23rdsfsi9fergi
 - axios 사용
 - dayjs 등 날짜 관련 라이브러리를 사용해도 되나, 사용하지 않아도 무방.
 - ui framework 1개 이상 사용.(material design, bootstrap...)
-- eslint 사용. airbnb | google (npx eslint --init)
+
 
 ### 기능
 - 가벼운 카카오 오픈채팅방이라고 보면 됨
