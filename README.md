@@ -30,7 +30,7 @@
 <del> ### join room </del>
 따로 사용하실 필요 없이, 처음 채팅을 해당방에 칠 경우 자동으로 조인이 됩니다.
 ### chatting list
-:GET /rooms/:room_id/chats { createdAtFrom, createdAtTo, order }
+:GET /rooms/:room_id/chats { fro, order }
 
 -> [
   { user, message, createdAt, },
@@ -39,7 +39,7 @@
   ...
 ]
 
-maximum 30 messages are loaded. You must use createdFrom, createdTo, order=(asc,desc) to load more messages.
+maximum 30 messages are loaded. You must use from, order=(asc,desc) to load more messages.
 
 for example, 
 ```
@@ -47,7 +47,7 @@ for example,
 ```
 when last message is like that, you can load more messages by sending
 
-https://snu-chat2.herokuapp.com/chats?createdAtFrom=1574940307945
+https://snu-chat2.herokuapp.com/chats?from=1574940307945
 
 When user is null, that message is special message. There are two types of special message, 'create room' and 'join room'. You must handle this message appropriately.
 
