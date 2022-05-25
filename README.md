@@ -18,17 +18,15 @@
 ### get rooms
 :GET /rooms { name }
 -> [
-  { id, name, usersCount },
-  { id, name, usersCount },
-  { id, name, usersCount }
+  { id, name, users },
+  { id, name, users },
+  { id, name, users }
 ]
 
 ### create room
 :POST /rooms { name }
 -> { id, name }
 
-<del> ### join room </del>
-따로 사용하실 필요 없이, 처음 채팅을 해당방에 칠 경우 자동으로 조인이 됩니다.
 ### chatting list
 :GET /rooms/:room_id/chats { fro, order }
 
@@ -47,7 +45,7 @@ for example,
 ```
 when last message is like that, you can load more messages by sending
 
-https://snu-chat2.herokuapp.com/chats?from=1574940307945
+https://snu-chat2.herokuapp.com/rooms/dfoi39412451/chats?from=1574940307945
 
 When user is null, that message is special message. There are two types of special message, 'create room' and 'join room'. You must handle this message appropriately.
 
@@ -92,6 +90,6 @@ Authorization: Key sdfsdlfkje23rdsfsi9fergi
 
 
 ### 일정
-- 6월 1일 23:59:59 까지 etl을 통해 제출
+- 6월 4일 23:59:59 까지 etl을 통해 제출
 - 1일 늦을시 마다 5%씩 감점.
 
