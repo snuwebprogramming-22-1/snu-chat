@@ -49,7 +49,7 @@ https://snu-chat2.herokuapp.com/rooms/dfoi39412451/chats?lastChatId=5ddfae935f3e
 
 
 ### send message (auth_required)
-:POST /rooms/:room_id/chats  
+:POST /rooms/:room_id/chats  { meessage }
 
 -> { roomId, meesage, created }
 
